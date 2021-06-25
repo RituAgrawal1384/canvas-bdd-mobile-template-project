@@ -1,0 +1,4 @@
+﻿#key=value (locators specific to lbu)
+text.field.email=//android.widget.TextView[contains(@text,'E-Mail')]/following-sibling::android.widget.EditText
+button.submit=//android.widget.TextView[contains(@text,'Submit')]
+text.home.page=//android.widget.TextView[contains(@text,'Welcome')]
