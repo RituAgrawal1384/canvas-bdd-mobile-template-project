@@ -22,7 +22,7 @@ import java.util.TimeZone;
         monochrome = true,
         features = "classpath:features",
         glue = {"com/mobile/template/stepdef", "com/automation/tat/tapsteps"},
-        tags = {"@test_tat", "~@ignore"},
+        tags = {"@test_web", "~@ignore"},
 
         plugin = {"pretty",
                 "html:reports/cucumber/cucumber-html",
@@ -47,12 +47,13 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
         TapBeansLoad.init();
         configvariable = (Configvariable) TapBeansLoad.getBean(Configvariable.class);
         seleniumBase = (SeleniumBase) TapBeansLoad.getBean(SeleniumBase.class);
+        seleniumBase.initializeSeleniumFramework();
 //        helperMethods = (HelperMethods) TapBeansLoad.getBean(HelperMethods.class);
 //        LOGGER.info("Setting environment file....");
 //        configvariable.setupEnvironmentProperties(System.getProperty("app.env"), System.getProperty("app.lbu"));
 //        LOGGER.info("Setting localization file....");
 //        helperMethods.loadLocalizationFile(System.getProperty("app.lbu"), System.getProperty("app.language"), System.getenv("DEVICEFARM_DEVICE_PLATFORM_NAME"));
-//        seleniumBase.initializeSeleniumFramework();
+//
     }
 
     @AfterSuite(alwaysRun = true)
