@@ -9,7 +9,8 @@ ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
 
 # We need wget to set up the PPA and xvfb to have a virtual screen and unzip to install the Chromedriver
 RUN apt-get update \
-    && apt-get install -y wget xvfb unzip
+    && apt-get install -y wget xvfb unzip \
+    && apt-get install -y git
 
 # Set up the Chrome PPA
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -42,9 +43,4 @@ RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
-# # Update Shell to Bash
-# RUN sed -i 's/sh/bash/g' /etc/passwd
-
-WORKDIR /home/tat-mobile-template-project
-COPY src /home/tat-mobile-template-project/src
-COPY pom.xml /home/tat-mobile-template-project
+WORKDIR /home
