@@ -1,12 +1,3 @@
-# # FROM arm64v8/maven:3.8-openjdk-11
-# FROM markhobson/maven-chrome:jdk-8
-# MAINTAINER "Ritu Agrawal"
-#
-# #Set working directory
-# WORKDIR /home/tat-mobile-template-project
-# COPY src /home/tat-mobile-template-project/src
-# COPY pom.xml /home/tat-mobile-template-project
-
 FROM openjdk:11-jdk
 MAINTAINER Ritu Agrawal
 
