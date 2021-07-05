@@ -1,14 +1,16 @@
 package com.mobile.template.runner;
 
-import com.automation.tat.config.Configvariable;
-import com.automation.tat.config.TapBeansLoad;
-import com.automation.tat.filehandling.FileReaderUtil;
-import com.automation.tat.reporting.TapReporting;
-import com.automation.tat.selenium.SeleniumBase;
+
+import com.automation.platform.config.Configvariable;
+import com.automation.platform.config.TapBeansLoad;
+import com.automation.platform.filehandling.FileReaderUtil;
+import com.automation.platform.reporting.TapReporting;
+import com.automation.platform.selenium.SeleniumBase;
 import com.mobile.template.utils.HelperMethods;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.testng.annotations.AfterSuite;
@@ -16,12 +18,12 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.TimeZone;
 
-@ComponentScan(basePackages = {"com.mobile.template", "com.automation.tat"})
+@ComponentScan(basePackages = {"com.mobile.template", "com.automation.platform"})
 @Configuration
 @CucumberOptions(
         monochrome = true,
         features = "classpath:features",
-        glue = {"com/mobile/template/stepdef", "com/automation/tat/tapsteps"},
+        glue = {"com/mobile/template/stepdef", "com/automation/platform/tapsteps"},
         tags = {"@test_web", "~@ignore"},
 
         plugin = {"pretty",
@@ -33,7 +35,7 @@ import java.util.TimeZone;
 
 public class CucumberRunner extends AbstractTestNGCucumberTests {
 
-    private static final Logger LOGGER = Logger.getLogger(CucumberRunner.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CucumberRunner.class);
 
     private Configvariable configvariable;
     private SeleniumBase seleniumBase;

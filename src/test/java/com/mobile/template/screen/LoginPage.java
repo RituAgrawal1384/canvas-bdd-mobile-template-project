@@ -1,7 +1,7 @@
 package com.mobile.template.screen;
 
-import com.automation.tat.config.Configvariable;
-import com.automation.tat.ui.UiBasePage;
+import com.automation.platform.config.Configvariable;
+import com.automation.platform.ui.UiBasePage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

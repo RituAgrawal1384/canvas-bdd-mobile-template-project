@@ -1,14 +1,15 @@
 package com.mobile.template.stepdef;
 
 
-import com.automation.tat.config.TapBeansLoad;
+import com.automation.platform.config.TapBeansLoad;
 import com.mobile.template.screen.LoginPage;
 import io.cucumber.java.en.Given;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class LoginStep {
-    private static final Logger logger = Logger.getLogger(LoginStep.class);
+    private static final Logger logger = LoggerFactory.getLogger(LoginStep.class);
 
     private LoginPage loginPage = (LoginPage) TapBeansLoad.getBean(LoginPage.class);
 
