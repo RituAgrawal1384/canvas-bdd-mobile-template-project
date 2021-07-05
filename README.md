@@ -1,2 +1,2 @@
-# tat-mobile-template-project
-This is the template project for mobile testing using TestAutomationTools and appium
+# canvas-bdd-mobile-template-project
+This is the template project for mobile testing using Canvas and appium
