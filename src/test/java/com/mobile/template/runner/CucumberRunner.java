@@ -24,7 +24,7 @@ import java.util.TimeZone;
         monochrome = true,
         features = "classpath:features",
         glue = {"com/mobile/template/stepdef", "com/automation/platform/tapsteps"},
-        tags = {"@test_web", "~@ignore"},
+        tags = {"@test_mobile", "~@ignore"},
 
         plugin = {"pretty",
                 "html:reports/cucumber/cucumber-html",

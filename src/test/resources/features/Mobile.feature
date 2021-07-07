@@ -1,4 +1,4 @@
-@test_tat
+@test_mobile
 Feature: Login to mobile app
 
   Background:
