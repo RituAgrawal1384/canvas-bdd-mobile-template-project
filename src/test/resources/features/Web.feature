@@ -5,8 +5,8 @@ Feature: Login to web app
     Given I load environment property file "uat" into global property map for lbu "sg"
 
   Scenario: Login to Web portal
-    Given I launch browser application "http://www.imdb.com"
-    Then I verify element "//h3[text()='Featured today']" is displayed
+    Given I launch browser application "https://ultimateqa.com/automation"
+    Then I verify element "//span[@id='Automation_Practice']" is displayed
     And I get browser title into variable "BROWSER_TITLE"
     Then I verify expected values with actual values as below
       | ${BROWSER_TITLE} | ${app.title} |
