@@ -3,9 +3,9 @@ package com.mobile.template.stepdef;
 
 import com.automation.platform.config.TapBeansLoad;
 import com.automation.platform.ui.UiBasePage;
-import io.cucumber.core.api.Scenario;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

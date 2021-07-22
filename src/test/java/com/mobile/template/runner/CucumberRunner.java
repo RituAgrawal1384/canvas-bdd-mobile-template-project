@@ -7,8 +7,8 @@ import com.automation.platform.filehandling.FileReaderUtil;
 import com.automation.platform.reporting.TapReporting;
 import com.automation.platform.selenium.SeleniumBase;
 import com.mobile.template.utils.HelperMethods;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.ComponentScan;
@@ -24,7 +24,7 @@ import java.util.TimeZone;
         monochrome = true,
         features = "classpath:features",
         glue = {"com/mobile/template/stepdef", "com/automation/platform/tapsteps"},
-        tags = {"@test_mobile", "~@ignore"},
+        tags = {"@test_web", "~@ignore"},
 
         plugin = {"pretty",
                 "html:reports/cucumber/cucumber-html",

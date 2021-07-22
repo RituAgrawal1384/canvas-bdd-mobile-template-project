@@ -3,7 +3,7 @@ package com.mobile.template.stepdef;
 
 import com.automation.platform.config.TapBeansLoad;
 import com.mobile.template.screen.LoginPage;
-import io.cucumber.java.en.Given;
+import cucumber.api.java.en.Given;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
